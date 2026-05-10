@@ -78,10 +78,11 @@ export const DashboardPage: React.FC = () => {
       <div className="max-w-2xl mx-auto px-4 py-5 space-y-4">
 
         {/* Recovery Ring — Hero Card */}
-        <Card className="bg-gradient-to-br from-green-500 to-green-700 text-white overflow-hidden relative">
-          <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-white/5 -translate-y-8 translate-x-8" />
-          <div className="flex items-center gap-6">
-            <ProgressRing value={recovery} size={100} strokeWidth={8} color="white">
+        <Card className="green-gradient shimmer-edge-on-green text-white overflow-hidden relative">
+          <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-white/5 -translate-y-12 translate-x-12" />
+          <div className="absolute bottom-0 left-0 w-24 h-24 rounded-full bg-black/5 translate-y-8 -translate-x-8" />
+          <div className="flex items-center gap-6 relative">
+            <ProgressRing value={recovery} size={108} strokeWidth={9} color="white" animate>
               <div className="text-center">
                 <p className="text-2xl font-extrabold">{recovery}</p>
                 <p className="text-[10px] text-green-100 uppercase tracking-wide">Score</p>

@@ -40,7 +40,7 @@ export const SubscriptionPage: React.FC = () => {
           const annualTotal = plan.priceAEDAnnual
 
           return (
-            <div key={plan.id} className={cn('bg-white rounded-3xl p-6 border-2 transition-all', plan.highlighted ? 'border-green-500 shadow-lg shadow-green-100' : 'border-gray-100', selectedPlan === plan.id && 'ring-2 ring-green-400')}>
+            <div key={plan.id} className={cn('rounded-3xl p-6 border-2 transition-all', plan.highlighted ? 'surface-shimmer-tinted border-green-500 pop-shadow shimmer-edge' : 'bg-white border-gray-100', selectedPlan === plan.id && 'ring-2 ring-green-400')}>
               {plan.highlighted && (
                 <div className="mb-3">
                   <Badge color="#52a07c" className="text-xs font-bold">⭐ Most Popular</Badge>

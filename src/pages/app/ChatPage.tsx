@@ -20,7 +20,7 @@ const MessageBubble: React.FC<{ message: ChatMessage; isStreaming?: boolean; str
           <Bot size={16} className="text-white" />
         </div>
       )}
-      <div className={cn('max-w-[80%] rounded-2xl px-4 py-3 text-sm leading-relaxed', isUser ? 'bg-green-500 text-white rounded-tr-sm' : 'bg-white text-gray-800 card-shadow rounded-tl-sm')}>
+      <div className={cn('max-w-[80%] px-4 py-3 text-sm leading-relaxed', isUser ? 'bg-green-500 text-white' : 'bg-gray-100 text-gray-900')} style={{ borderRadius: isUser ? '16px 16px 4px 16px' : '16px 16px 16px 4px' }}>
         {content.split('\n').map((line, i) => (
           <React.Fragment key={i}>
             {line}
@@ -140,7 +140,7 @@ export const ChatPage: React.FC = () => {
             <div className="grid grid-cols-2 gap-2 mb-4">
               {QUICK_CHAT_PROMPTS.map(prompt => (
                 <button key={prompt} onClick={() => sendMessage(prompt)}
-                  className="text-left px-4 py-3 rounded-2xl bg-white border border-gray-200 text-sm text-gray-700 hover:border-green-400 hover:bg-green-50 transition-all font-medium card-shadow">
+                  className="text-left px-4 py-3 rounded-2xl bg-white border border-gray-200 text-[13px] text-gray-700 hover:border-green-400 hover:bg-green-50 transition-all font-medium shimmer-edge">
                   {prompt}
                 </button>
               ))}

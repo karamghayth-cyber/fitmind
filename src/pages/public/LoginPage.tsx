@@ -38,7 +38,7 @@ export const LoginPage: React.FC = () => {
           <span className="text-xl font-bold text-gray-900">FitMind</span>
         </button>
 
-        <div className="bg-white rounded-3xl p-8 card-shadow">
+        <div className="surface-shimmer-strong shimmer-edge rounded-3xl p-8 card-shadow">
           <h1 className="text-2xl font-extrabold text-gray-900 mb-1">Welcome back</h1>
           <p className="text-gray-500 text-sm mb-6">Sign in to continue your health journey</p>
 
