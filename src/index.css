@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  /* Soft sage-green palette — warmer, less saturated, blends gently with white */
+  --color-green-50:  #f4faf7;
+  --color-green-100: #e6f4ed;
+  --color-green-200: #cce8d9;
+  --color-green-300: #a1d4bb;
+  --color-green-400: #73ba9a;
+  --color-green-500: #52a07c;
+  --color-green-600: #3f8464;
+  --color-green-700: #336950;
+  --color-green-800: #29533f;
+  --color-green-900: #1f3f30;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-arabic: 'Noto Sans Arabic', system-ui, sans-serif;
+
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #ffffff;
+    color: #111827;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  #root {
+    min-height: 100svh;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .green-gradient {
+    background: linear-gradient(135deg, #52a07c 0%, #3f8464 100%);
+  }
+
+  .card-shadow {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+  }
+
+  .ring-green {
+    ring-color: #52a07c;
+  }
+}
